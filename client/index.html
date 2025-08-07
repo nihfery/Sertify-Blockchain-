@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certified Blockchain</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="wallet-section">
+  <button id="walletButton" onclick="connectWallet()">Connect Wallet</button>
+  <div class="wallet-dropdown" id="walletDropdown">
+    <button onclick="logoutWallet()">Logout</button>
+  </div>
+</div>
+
+    <h1>Certified Blockchain</h1>
+
+    <h2>📤 Upload Sertifikat PDF</h2>
+    <input type="file" id="pdfFile" />
+    <button onclick="uploadCertificate()">Upload</button>
+    <div class="status" id="uploadStatus"></div>
+
+    <h2>🔎 Validasi Sertifikat</h2>
+    <input type="text" id="hashInput" placeholder="Masukkan Tx Hash..." />
+    <button onclick="validateByTxHash()">Validasi via Tx Hash</button>
+    <div class="status" id="validateResult"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
